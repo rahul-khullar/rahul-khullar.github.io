@@ -1,0 +1,679 @@
+body {
+  font-family: "Titillium Web", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+div{
+    box-sizing: border-box;
+}
+
+@media (max-width: 1460px) {
+  .secondary-container {
+    width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+#topbar {
+  background-color: #ffffff;
+  /* padding: 5px 0px; */
+}
+#topbar .ipl-dates span {
+  color: #1c1c1c;
+  font-size: 14px;
+  font-weight: bold;
+}
+#topbar .ipl-dates span:last-child {
+  color: #525252;
+  margin-left: 15px;
+}
+
+#topbar .bcci-logo a {
+  color: #5e5e5e;
+  font-weight: 600;
+  font-size: 14px;
+}
+#topbar .bcci-logo a:hover {
+  color: #111;
+}
+
+.sociable {
+  display: flex;
+  justify-content: space-between;
+}
+.sociable li a {
+  color: #a8a8a8;
+}
+.sociable li:first-child {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* 
+* Header 
+*/
+#header {
+  background: linear-gradient(
+    92.04deg,
+    #18184a 24.18%,
+    #19398a 50.95%,
+    #18184a 110.32%
+  );
+}
+
+/* 
+* Main Navigation
+*/
+#main-navigation {
+}
+#main-navigation > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-navigation > ul > li {
+  position: relative;
+}
+#main-navigation > ul > li > a {
+  color: #fff;
+  display: block;
+  padding: 17px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  transition-duration: 0.5s;
+}
+#main-navigation > ul > li > a:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: 1px solid #329ed9;
+  background-color: #329ed9;
+  left: 25%;
+  bottom: 20%;
+  transform: scale(0, 1);
+  transition-duration: 0.5s;
+}
+#main-navigation > ul > li > a:hover {
+  color: #329ed9;
+}
+#main-navigation > ul > li > a:hover:after {
+  transform: scale(1, 1);
+}
+
+#main-navigation .dropdown {
+  position: absolute;
+  background-color: #fff;
+  width: 250%;
+  left: -75%;
+  text-align: center;
+  border-radius: 5px;
+  display: none;
+  z-index: 10;
+  /* overflow: hidden; */
+}
+#main-navigation .dropdown ul li a {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  padding: 10px;
+  color: #1b3d89;
+  border-bottom: 2px solid #e6eeff;
+  transition-duration: 0.5s;
+}
+#main-navigation .dropdown ul li:last-child a {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#main-navigation .dropdown ul li a:hover {
+  background-color: #e6eeff;
+}
+#main-navigation > ul > li:hover .dropdown {
+  display: block;
+}
+
+#main-navigation .dropdown:before {
+  content: "";
+  position: absolute;
+  border: 10px solid #fff;
+  border-color: transparent transparent #fff;
+  top: -20px;
+  margin-left: -10px;
+}
+
+#secondary-nav {
+  background: linear-gradient(
+    90.15deg,
+    #ef4123 -4.45%,
+    #ef7923 52.36%,
+    #ef4123 118.57%
+  );
+}
+#secondary-nav ul {
+  display: flex;
+}
+#secondary-nav ul li {
+  margin: 0px 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 7px 0px;
+}
+#secondary-nav ul li:first-child {
+  text-transform: uppercase;
+  font-style: italic;
+}
+#secondary-nav ul li:first-child img {
+  width: 20%;
+}
+#secondary-nav ul li a {
+  color: #fff;
+}
+#secondary-nav ul li a i {
+  margin-left: 20px;
+}
+
+/* 
+* Banner 
+*/
+#banner {
+  background-image: url("https://www.iplt20.com/assets/images/banner_bg.jpg");
+  padding: 15px 15px 50px 0px;
+}
+#banner .carousel-inner {
+  max-height: 450px;
+}
+#banner img {
+  /* max-height: 400px;
+    object-fit: cover; */
+}
+#banner .carousel-indicators {
+  bottom: -55px;
+}
+#banner .carousel-indicators [data-bs-target] {
+  width: 80px;
+  height: 9px;
+  transform: skew(-25deg, 0deg);
+}
+
+#banner .carousel-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(0deg, #000 0, rgba(0, 0, 0, 0) 77.79%);
+}
+.banner-tabs {
+  background-image: url("https://www.iplt20.com/assets/images/stat-bg.jpg");
+  background-size: 100% 100%;
+}
+.banner-tabs .nav li {
+  width: 50%;
+}
+.banner-tabs .nav-link {
+  color: #fff;
+  width: 100%;
+  height: 34px;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 0px;
+  border-radius: 0px;
+}
+.banner-tabs .nav-link.active {
+  background-color: #ea4022;
+  color: #fff;
+}
+.points-table {
+  border-collapse: separate;
+  border-spacing: 0px 11px;
+  margin-top: -27px;
+  width: 100%;
+}
+.points-table thead th {
+  color: #fff;
+  text-align: center;
+}
+.points-table tbody tr {
+  background-color: #fff;
+}
+.points-table tr td:not(:first-child) {
+  text-align: center;
+}
+.points-table tr td {
+  padding: 5px;
+  font-weight: bold;
+}
+.points-table img {
+  width: 15% !important;
+}
+
+.points-table .result {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  padding: 1px 0px 5px 0px;
+  margin-right: 6px;
+}
+.points-table .win {
+  background-color: #01a54b;
+}
+.points-table .loss {
+  background-color: red;
+}
+
+#top-videos,
+#top-highlights,
+#latest-news,
+#leaders-2021 {
+  background-size: 100% 100%;
+  padding: 40px 0px;
+  overflow: hidden;
+}
+
+/* Top Videos */
+#top-videos {
+  background-image: url("https://www.iplt20.com/assets/images/latest-bg.png");
+}
+#top-videos h2 {
+  color: #ea4022;
+}
+
+/* Top Highlights */
+#top-highlights {
+  background-image: url("https://www.iplt20.com/assets/images/TopHighlights-bg.jpg");
+}
+#top-highlights h2 {
+  color: #fff;
+}
+
+/* Latest News */
+
+#latest-news {
+  background-image: url("https://www.iplt20.com/assets/images/latest-bg.png")
+    no-repeat center center/cover;
+}
+#latest-news h2 {
+  color: #ea4022;
+}
+
+#app-official {
+  background-image: url("https://www.iplt20.com/assets/images/ipl-app-bg.png");
+  padding-bottom: 30px;
+}
+
+.app-section .custom-row .app-download {
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+}
+.app-section .custom-row .app-download a {
+  margin-right: 22px;
+  display: inline-block;
+}
+.app-section h2 {
+  font-size: 32px;
+  color: #ef4123;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.app-section .custom-row {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  padding-top: 80px;
+  padding-left: 80px;
+}
+.app-section .custom-row p {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400px;
+}
+
+.app-section .custom-row .mobile img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+/* Common for all sections */
+.section h2 {
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.section .custom-row {
+  display: flex;
+  width: 250%;
+}
+.section .custom-row .custom-col {
+  width: 10%;
+  margin: 0px 10px;
+}
+.section .custom-row img {
+  width: 100%;
+  max-height: 183px;
+}
+.section .custom-col .box {
+  border: 6px solid transparent;
+  background: linear-gradient(
+      140.76deg,
+      rgba(255, 255, 255, 0.6) -17.17%,
+      rgba(177, 184, 192, 0.6) 142.13%
+    )
+    border-box;
+  border-radius: 5px;
+  position: relative;
+}
+/* .section .custom-col {
+    border: 6px solid transparent;
+    background: linear-gradient(140.76deg,rgba(255,255,255,.6) -17.17%,rgba(177,184,192,.6) 142.13%) border-box;
+    border-radius: 5px;
+    position: relative;
+} */
+.section .custom-col .box .text {
+  background-color: #fff;
+  padding: 5px 0px 30px;
+  min-height: 128px;
+}
+.section .custom-col .image {
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.section .custom-col .image img {
+  transition: 0.5s;
+}
+.section .custom-col .image:hover img {
+  transform: scale(1.2, 1.2);
+}
+.section .custom-col:hover .text {
+  background: linear-gradient(
+    92.04deg,
+    #18184a 24.18%,
+    #19398a 50.95%,
+    #18184a 110.32%
+  );
+  color: #fff;
+}
+
+.section .box .play-icon {
+  position: absolute;
+  width: 15%;
+  left: calc(50% - 7.5%);
+  top: calc(50% + 3%);
+}
+.section .view-all {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 15px;
+  background: #ef4123;
+  box-shadow: 3px 3px 4px rgb(0 0 0 / 49%);
+  border-radius: 2px;
+  transition: 0.3s ease-in-out;
+}
+.section .box .text .text-size {
+  /* word-wrap:break-word; */
+
+  font-weight: 600;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: text-top;
+  letter-spacing: 1px;
+}
+
+/* 2021 leaders */
+#leaders-2021 {
+  background: url("https://www.iplt20.com/assets/images/latest-bg.png")
+    no-repeat center center/cover;
+}
+
+.leaders-section h2 {
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.leaders-section .custom-row {
+  display: flex;
+  width: 200%;
+}
+.leaders-section .custom-row .custom-col {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 30%);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.leaders-section .custom-row img {
+  width: 100%;
+  max-height: 183px;
+}
+.leaders-section .custom-col .playcard-box {
+  min-height: 160px;
+  padding-bottom: 16px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.leaders-section .photos {
+  width: 100%;
+  height: 207px;
+  text-align: center;
+  padding-top: 24px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.leaders-section .custom-row .playcard-box .photos .img {
+  width: auto;
+  height: 183px;
+  /* display: initial; */
+  vertical-align: middle;
+  transition: 0.5s;
+}
+.leaders-section .custom-row .playcard-box .photos .img{
+    transform: scale(1.2, 1.2);
+  }
+  /* .section .custom-col:hover .text {
+    background: linear-gradient(
+      92.04deg,
+      #18184a 24.18%,
+      #19398a 50.95%,
+      #18184a 110.32%
+    );
+    color: #fff;
+  } */
+.leaders-section .photos .corner-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 4px;
+  top: 5px;
+}
+.leaders-section .photos .corner-icon .img {
+  width: auto;
+  height: 100%;
+  display: initial;
+  vertical-align: middle;
+}
+.cap-holder-title {
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  padding: 0.2rem 0;
+  font-weight: 700;
+  width: 100%;
+}
+
+.inner-box {
+  min-height: 150px;
+}
+
+.leaders-section .sirname {
+  color: #111;
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.leaders-section .fair-play-sirname {
+  color: #111;
+  font-size: 22px !important;
+  line-height: 30px;
+  height: 36px;
+  display: block;
+  font-weight: 900;
+  text-align: center;
+}
+.leaders-section .name {
+  color: #111;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+
+.leaders-section .numbers {
+  color: #111;
+  font-size: 38px;
+  line-height: 30px;
+  height: 36px;
+  display: block;
+  font-weight: 900;
+  text-align: center;
+}
+
+.leaders-section .number-title {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #303030;
+  opacity: 0.7;
+  clear: both;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  height: 30px;
+}
+
+.playercard-box a {
+  width: 100%;
+  pointer-events: none;
+  text-decoration: none;
+  color: #0d6efd;
+}
+
+.leaders-section .view-full-list {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  color: #111;
+  pointer-events: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+}
+/* in-numbers-section */
+#in-numbers-2021 {
+  background: url("https://www.iplt20.com/assets/images/numbers-bg.jpg")
+    no-repeat center center/cover;
+}
+.in-numbers-section .heading {
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+  margin-top: 40px;
+}
+.in-numbers-row-1 {
+  display: grid;
+  grid-template-columns: 50% 15% 20%;
+  /* grid-template-columns: repeat(3, 1fr); */
+  justify-content: space-around;
+  
+}
+.in-numbers-row-2 {
+    display: grid;
+    grid-template-columns: 25% 25% 20% 25%;
+    /* grid-template-columns: repeat(3, 1fr); */
+    justify-content: space-around;
+  }
+  .in-numbers-row-3 {
+    display: grid;
+    grid-template-columns: 20% 55% 20%;
+    /* grid-template-columns: repeat(3, 1fr); */
+    justify-content: space-around;
+  }
+
+.in-numbers-col {
+  border: 1px solid red;
+  background-color: lightgray;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.in-numbers-col-1,.in-numbers-col-2,.in-numbers-col-3,.in-numbers-col-4,.in-numbers-col-5,.in-numbers-col-6,.in-numbers-col-7,.in-numbers-col-8,.in-numbers-col-9 {
+  border-radius: 10px;
+  position: relative;
+ 
+}
+
+.in-numbers-col-1 > img {
+  position: absolute;
+  width: 104%;
+  height: 106%;
+  
+  right: -2%;
+  top: -2%;
+  /* object-fit: cover; */
+}
+.in-numbers-col-2{
+    background: url("https://www.iplt20.com/assets/images/net_runrate_bg.png") no-repeat center center/cover;
+    justify-content: center;
+  }
+
+  .in-numbers-col-2 h2{
+      
+      text-align: center;
+      
+  }
+
+
+ 
